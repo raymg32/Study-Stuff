@@ -1,6 +1,8 @@
 //setting uo the size of the window
 void setup(){
   size(800, 600);
+  smooth();
+  frameRate(30);
 }
 
 void draw(){
@@ -12,7 +14,7 @@ void draw(){
   ellipse(mouseX, mouseY - 100, 80, 80);
 
   //body
-  fill(157,34,196);
+  fill(mouseX,mouseY,mouseY);
   rectMode(CENTER);
   rect(mouseX,mouseY , 90, 120);
 
@@ -20,7 +22,7 @@ void draw(){
   ellipseMode(CENTER);
   ellipse(mouseX - 30, mouseY - 112, 15, 15);
 
-  //eyes(right)
+  //eyes(right) 
   ellipseMode(CENTER);
   ellipse(mouseX, mouseY - 112, 15,15);
 
@@ -30,5 +32,9 @@ void draw(){
   rect(mouseX - 10, mouseY - 80, 20,10);
 
   //antenna
-  line(mouseX,mouseY - 140, mouseX ,mouseY - 200);
+  line(mouseX,mouseY - 140, pmouseX , pmouseY - 200);
+}
+void keyPressed(){
+  
+  println("im AWESOME!!");
 }
