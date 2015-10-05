@@ -9,26 +9,26 @@ void draw(){
 
   //head
   fill(196, 139,34, 127);
-  ellipse(400, 300, 80, 80);
+  ellipse(mouseX, mouseY - 100, 80, 80);
 
   //body
   fill(157,34,196);
   rectMode(CENTER);
-  rect(400, 400, 90, 120);
+  rect(mouseX,mouseY , 90, 120);
 
   //eyes (left)
   ellipseMode(CENTER);
-  ellipse(370, 290, 15, 15);
+  ellipse(mouseX - 30, mouseY - 112, 15, 15);
 
   //eyes(right)
   ellipseMode(CENTER);
-  ellipse(400, 290, 15,15);
+  ellipse(mouseX, mouseY - 112, 15,15);
 
   //mouth
   fill(0);
   rectMode(CENTER);
-  rect(390, 320, 20,10);
+  rect(mouseX - 10, mouseY - 80, 20,10);
 
   //antenna
-  line(400,260, 400,190);
+  line(mouseX,mouseY - 140, mouseX ,mouseY - 200);
 }
