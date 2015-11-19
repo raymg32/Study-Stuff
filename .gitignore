@@ -1,4 +1,10 @@
-//setting uo the size of the window
+//Student name : Gershom Raymundo     CST112 Wednesday Evening
+//Project One: Villain (Soccee) tries to catch the hero (laBois) who chases the gold
+
+float goldX, goldY;
+float socceeX, socceeY;
+float laBoisX, laBoisY;
+
 void setup(){
   size(800, 600);
   smooth();
@@ -6,34 +12,50 @@ void setup(){
 }
 
 void draw(){
-  //drawing the background
-  background(255);
+  //scene();                       //create the scene
+  laBois();                        //create the hero labois
+  //animateLaBois();               //animate labois
+  //soccee();                      //create enemy named soccee
+  //animateSoccee();               //animate Soccee
+  //gold();                        //create gold
+  //animateGold();                 //animate gold
+  //reset();                       //rese to the beginning
+  //messages();                    // messages
+}
 
+void laBois(){ 
   //head
-  fill(196, 139,34, 127);
-  ellipse(mouseX, mouseY - 100, 80, 80);
+  fill(196, 139, 34, 127);
+  ellipse( 300, 300 - 100, 80, 80);
 
   //body
-  fill(mouseX,mouseY,mouseY);
+  fill( 206, 44, 44);
   rectMode(CENTER);
-  rect(mouseX,mouseY , 90, 120);
+  rect( 300, 300 , 90, 120);
 
   //eyes (left)
+  fill(255);
   ellipseMode(CENTER);
-  ellipse(mouseX - 30, mouseY - 112, 15, 15);
+  ellipse(300 - 30, 300 - 112, 15, 15);
 
   //eyes(right) 
   ellipseMode(CENTER);
-  ellipse(mouseX, mouseY - 112, 15,15);
+  ellipse(300, 300 - 112, 15,15);
 
   //mouth
   fill(0);
   rectMode(CENTER);
-  rect(mouseX - 10, mouseY - 80, 20,10);
+  rect(300 - 10, 300 - 80, 20,10);
 
   //antenna
-  line(mouseX,mouseY - 140, pmouseX , pmouseY - 200);
+  line(300,300 - 140, 300 , 300 - 200);
+  
 }
+
+void animateZoog(){
+  
+}
+
 void keyPressed(){
   
   println("im AWESOME!!");
